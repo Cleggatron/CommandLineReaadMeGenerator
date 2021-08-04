@@ -20,7 +20,13 @@ const promptUser = () => {
 function writeToFile(fileName, data) {}
 
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+    promptUser()
+    .then((answers) => writeFileAsync(`./GeneratedReadme/${answers.title}.md`, generateMarkdown(answers)))
+    .then(() => console.log("Sucess!"))
+    .catch((err) => console.error(err));
+}
+
 
 // Function call to initialize app
 init();
