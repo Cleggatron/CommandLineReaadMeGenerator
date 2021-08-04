@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Cleggatron/CommandLineReaadMeGenerator.git"
+    "url": "git+https://github.com/Cleggatron/CommandLineReadMeGenerator.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Cleggatron/CommandLineReaadMeGenerator/issues"
+    "url": "https://github.com/Cleggatron/CommandLineReadMeGenerator/issues"
   },
-  "homepage": "https://github.com/Cleggatron/CommandLineReaadMeGenerator#readme",
+  "homepage": "https://github.com/Cleggatron/CommandLineReadMeGenerator#readme",
   "dependencies": {
     "inquirer": "^8.1.2"
   }
