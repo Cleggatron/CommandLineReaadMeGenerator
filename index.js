@@ -32,7 +32,7 @@ const promptUser = () => {
     },
     {
         type: "input",
-        message: "Please provide the relative file path for a screenshot.",
+        message: "Please provide the relative file path for a screenshot.\n This MUST be relative to the end project for which we are generating this ReadMe",
         name: "usageScreenshot"
     },
     {
