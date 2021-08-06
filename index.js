@@ -1,4 +1,4 @@
-// TODO: Include packages needed for this application
+//Our dependencies
 const fs = require("fs");
 const util = require("util");
 const inquirer = require("inquirer");
@@ -7,7 +7,7 @@ const generateMarkdown = require("./generateMarkdown.js");
 //Creates our readme asynchronously
 const writeFileAsync = util.promisify(fs.writeFile);
 
-// TODO: Create an array of questions for user input
+//Our questions array
 const promptUser = () => {
     return inquirer.prompt([
     {
@@ -70,7 +70,7 @@ const promptUser = () => {
 ])};
 
 
-// TODO: Create a function to initialize app
+//Create out function
 function init() {
     promptUser()
     .then((answers) => writeFileAsync(`./GeneratedReadme/${answers.title}.md`, generateMarkdown(answers)))

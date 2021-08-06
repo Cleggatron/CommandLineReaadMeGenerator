@@ -1,4 +1,34 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
+//List other contributors for credits
+function renderContributors(contributors){
+  if(contributors === ""){
+    return "N/A"
+  }else{
+    let contributorsArray = contributors.split(",");
+    let contributorsString = "The contributors are:\n"
+    for(let i = 0; i < contributorsArray.length; i++){
+      contributorsString += " - " + contributorsArray[i] + "\n"
+    }
+
+    return contributorsString;
+  }
+}
+
+//Render a list of the 3rd party tech for credits
+function renderTechnology(technology){
+  if(technology === ""){
+    return "N/A"
+  }else{
+    let technologyArray = technology.split(",");
+    let technologyString = "The Third Party Code used:\n";
+
+    for(let i = 0; i < technologyArray.length; i++){
+      technologyString += " - " + technologyArray[i] + "\n"
+    }
+
+    return technologyString;
+  }
+}
+
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
 
@@ -68,7 +98,6 @@ function renderLicenseBadge(license) {
   return licenseBadgeString;
 }
 
-// TODO: Create a function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
 
@@ -138,7 +167,6 @@ function renderLicenseLink(license) {
   return licenseLinkString
 }
 
-// TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
   
@@ -1057,13 +1085,15 @@ function renderLicenseSection(license) {
 
 }
 
-// TODO: Create a function to generate markdown for README
+// Create our Markdown template
 function generateMarkdown(data) {
   
   //create our license badge
   let renderedLicenseBadge = renderLicenseBadge(data.license);
   let renderedLicenseLink = renderLicenseLink(data.license);
   let renderedLicenseSection = renderLicenseSection(data.license);
+  let contributors = renderContributors(data.contributors);
+  let technologies = renderTechnology(data.technology);
 
   return `# ${data.title}
 
@@ -1096,10 +1126,10 @@ function generateMarkdown(data) {
   ## Credits
 
   Other Contributors: 
-  ${data.contributors}
+  ${contributors}
 
   Third Party Technologies:
-  ${data.technology}
+  ${technologies}
 
   ## License
   ${data.license}
