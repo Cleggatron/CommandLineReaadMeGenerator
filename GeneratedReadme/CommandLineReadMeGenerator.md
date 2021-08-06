@@ -22,7 +22,7 @@
 
   ## Usage
 
-  ![File In Action](./Assets/ReadmeGeneratorScreenshot.png)
+  ![File In Action](../Assets/ReadmeGeneratorScreenshot.png)
 
   Once the dependencies are installed we can open the terminal and run 'node index.js'. The user will then be prompted by series of questions to get hte necessary content for the Readme. The questions should contain all hte information needed to input the data correctly. This will then create the file in a subfolder called GeneratedReadme. Notes: The file path for the screenshot will need to be local to the directories for the end project. 
 
@@ -73,3 +73,4 @@
 
   You can also find me at my Github:
   [Github Profile](https://github.com/Cleggatron)
+
