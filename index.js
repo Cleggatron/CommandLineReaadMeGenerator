@@ -17,12 +17,12 @@ const promptUser = () => {
     }, 
     {
         type: "input",
-        message: "Please enter a short description of your project. Points to cover: What was your motivation?\nWhy did you build this?\nWhat does it solve?\nWhat did you learn?",
+        message: "Please enter a short description of your project. Points to cover: What was your motivation?\n Why did you build this?\n What does it solve?\n What did you learn?\n It can be pasted in if it is multi-line.",
         name: "description"
     },
     {
         type: "input",
-        message: "Please provide a step by step guide to the installation of the project.",
+        message: "Please provide a step by step guide to the installation of the project. \n It can be pasted in if it is multi-line.",
         name: "installation"
     },
     {
